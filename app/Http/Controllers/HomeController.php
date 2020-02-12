@@ -20,9 +20,8 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * Index() funkcija atsakinga už visas autentifikuoto vartotojo sukurtų klausimynų
+     * grąžinimą ir pateikimą.
      */
     public function index()
     {

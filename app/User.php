@@ -38,6 +38,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * OneToMany sąryšis tarp User ir Questionnaire modelių.
+     * Vartotojas gali turėti daug klausimynų.
+    */
     public function questionnaires(){
       return $this->hasMany(Questionnaire::class);
     }

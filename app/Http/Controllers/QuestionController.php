@@ -13,20 +13,28 @@ class QuestionController extends Controller
       return ;
     }
 
+    /**
+     * Create() funkcija atsakinga už klausimo create formos atvaizdavimą
+    */
     public function create(Questionnaire $questionnaire)
     {
       return view('question.create', compact('questionnaire'));
     }
 
+    /**
+     * Store() funkcija atsakinga už naujo klausimo ir galimų atsakymų sukūrymą ir įrašymą į duomenų bazę
+    */
     public function store(Questionnaire $questionnaire)
     {
-      // $this->authorize('update', $question->questionnaire);
       $data = $this->validateData();
       $question = $questionnaire->questions()->create($data['question']);
       $question->answers()->createMany($data['answers']);
       return redirect('/questionnaires/'.$questionnaire->id);
     }
 
+    /**
+     * Edit() funkcija atsakinga už klausimo edit formos atvaizdavimą
+    */
     public function edit(Questionnaire $questionnaire, Question $question)
     {
 
@@ -36,6 +44,9 @@ class QuestionController extends Controller
       return view('question.edit', compact('questionnaire', 'question'));
     }
 
+    /**
+      * Update() funkcija skirta už klausimo ir jo galimų atsakymų informacijos atnaujinimą.
+    */
     public function update(Questionnaire $questionnaire, Question $question){
 
       $this->authorize('update', $question->questionnaire);
@@ -50,6 +61,9 @@ class QuestionController extends Controller
       return redirect($questionnaire->path());
     }
 
+    /**
+      * Destroy() funkcija skirta už klausimo ir jo atsakymų ištrinimą iš duomenų bazės.
+    */
     public function destroy(Questionnaire $questionnaire, Question $question)
     {
 
@@ -62,6 +76,9 @@ class QuestionController extends Controller
       return redirect($questionnaire->path());
     }
 
+    /**
+      * ValidateData() funkcija skirta už klausimo, įvedamos informacijos validavimą.
+    */
     public function validateData()
     {
       return request()->validate([

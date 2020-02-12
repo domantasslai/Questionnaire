@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class SurveyController extends Controller
 {
+
+  /**
+   * Show() funkcija atsakinga už apklausos atvaizdavimą
+  */
   public function show(Questionnaire $questionnaire, $slug){
 
     $questionnaire->load('questions.answers');
-
-
     return view('survey.show', compact('questionnaire'));
   }
 
+  /**
+   * Store() funkcija atsakinga už vartotojo atsakymų į klausimus sukurimą ir įrašymą į duomenų bazę
+  */
   public function store(Questionnaire $questionnaire){
 
     $data = request()->validate([
