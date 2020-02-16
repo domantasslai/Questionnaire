@@ -1,4 +1,4 @@
-##Apie projektą
+## Apie projektą
 
 Questionnaire, kuriame kiekvienas vartotojas gali:
 
@@ -12,6 +12,6 @@ Questionnaire, kuriame kiekvienas vartotojas gali:
    - Redaguoti/ištrinti klausimyną;
    - Sukurti klausimus ir galimus atsakymus;
    - Redaguoti/ištrinti klausimus ir galimus atsakymus;
-   - Siųsti sukurtus klausimynųs apklausos dalyviams;
+   - Siųsti sukurtus klausimynus apklausos dalyviams;
    
  >Darbui naudota: Laravel 6, Bootstrap.
