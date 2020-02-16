@@ -4,16 +4,14 @@ Questionnaire, kuriame kiekvienas vartotojas gali:
 
 - Neregistruoto vartotojo Use case:
    - Užsiregistruoti;
-   - Atsakinėti į kitus;
-   - Peržiūrėti visas įkeltas kitų vartotojų nuotraukas;
+   - Atsakinėti į atsiųstas apklausas;
 
 - Registruoto vartotojo Use case:
-   - Prisijungti prie sistemos
-   - Kelti savo nuotraukas su prierašu;
-   - Sekti/nesekti kitus užsiregistravusius narius;
-   - Kelti savo profilio siekėjų skaičių;
-   - Peržiūrėti kitus profilius;
-   - Peržiūrėti visas įkeltas kitų vartotojų nuotraukas;
-   - Redaguoti savo profilio duomenis (profilio nuotrauka, prierašas, url);
-
- >Darbui naudota: Laravel, Vue, Bootstrap.
+   - Prisijungti prie sistemos;
+   - Sukurti klausimyną;
+   - Redaguoti/ištrinti klausimyną;
+   - Sukurti klausimus ir galimus atsakymus;
+   - Redaguoti/ištrinti klausimus ir galimus atsakymus;
+   - Siųsti sukurtus klausimynųs apklausos dalyviams;
+   
+ >Darbui naudota: Laravel 6, Bootstrap.
