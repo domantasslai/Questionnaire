@@ -16,4 +16,4 @@ Questionnaire, kuriame kiekvienas vartotojas gali:
    - Peržiūrėti visas įkeltas kitų vartotojų nuotraukas;
    - Redaguoti savo profilio duomenis (profilio nuotrauka, prierašas, url);
 
-    Darbui naudota: Laravel, Vue, Bootstrap.
+ >Darbui naudota: Laravel, Vue, Bootstrap.
